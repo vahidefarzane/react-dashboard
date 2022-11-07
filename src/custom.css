@@ -4,10 +4,14 @@
     font-family: vazir;
     src: url(./fonts/Vazir-FD-WOL.ttf);
 }
+@font-face {
+    font-family: vazir-bold;
+    src: url(./fonts/Vazir-Bold-FD-WOL.ttf);
+}
 
 :root{
---white :rgb(238, 230, 230);
---white-50:#c4bdbd;
+--white :rgb(241, 239, 239);
+--white-50:#ece9e9;
 --main : rgb(66, 47, 97);
 }
 
@@ -24,4 +28,11 @@ body{
 }
 *,*::before,*::after{
     box-sizing: inherit;
+}
+input{
+    outline: none;
+    border: none;
+}
+button{
+    border: none;
 }

@@ -7,12 +7,15 @@
 .sidebar-title{
     font-size: 1.4rem;
     color: var(--white);
-    padding: 1rem;
+    padding: 0.9rem;
     text-align: right;
     border-bottom: 2px solid #7156aa;
 }
 .sidebar-links{
     margin-top: 1rem;
+}
+.sidebar-icon{
+    margin-left: 1rem;
 }
 .sidebar-links li{
     position: relative;
@@ -26,6 +29,7 @@
     align-items: center;
     font-size: 1rem;
     text-decoration: none;
+    font-family: vazir-bold;
 }
 .sidebar-links li.active{
     background-color: #30214e;

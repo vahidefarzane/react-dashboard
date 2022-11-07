@@ -5,18 +5,23 @@
     src: url(./fonts/Vazir-FD-WOL.ttf);
 }
 
-
-
 :root{
---white :#fff;
---white-50:#f0f0f0;
---main : rgb(155, 194, 196);
+--white :rgb(238, 230, 230);
+--white-50:#c4bdbd;
+--main : rgb(66, 47, 97);
 }
 
 body{
     background-color: var(--white-50);
+    box-sizing: border-box;
+    display: flex;
+    direction: rtl;
 }
 
 *,body,html{
     font-family: vazir;
+    font-size: 100%;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
 }

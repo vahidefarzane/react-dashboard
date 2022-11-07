@@ -1,0 +1,35 @@
+.sidebar{
+    position: fixed;
+    background-color: var(--main);
+    flex: 1;
+    height: 100vh;
+}
+.sidebar-title{
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 2px solid #7156aa;
+}
+.sidebar-links{
+    margin-top: 1rem;
+}
+.sidebar-links li{
+    position: relative;
+    padding: 1rem;
+}
+.sidebar-links li a{
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.sidebar-links li.active{
+    background-color: #30214e;
+}
+.sidebar-links li:first-child{
+    margin-bottom: 1.4rem;
+}

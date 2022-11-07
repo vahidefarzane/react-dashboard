@@ -1,0 +1,22 @@
+@import './reset.css';
+
+@font-face {
+    font-family: vazir;
+    src: url(./fonts/Vazir-FD-WOL.ttf);
+}
+
+
+
+:root{
+--white :#fff;
+--white-50:#f0f0f0;
+--main : rgb(155, 194, 196);
+}
+
+body{
+    background-color: var(--white-50);
+}
+
+*,body,html{
+    font-family: vazir;
+}

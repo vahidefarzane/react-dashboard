@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Errorbox from "../Errorbox/Errorbox";
 
 export default function Users() {
   return (
-    <div>Users</div>
-  )
+    <div>
+      <Errorbox massage="هیچ کاربری یافت نشد" />
+    </div>
+  );
 }

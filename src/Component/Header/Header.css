@@ -1,6 +1,6 @@
-.header{
+/* .header{
     width: 143%;
-}
+} */
 .header,.header-right,.header-left{
     display: flex;
     justify-content: space-between;
@@ -30,12 +30,13 @@
 .header-searchbox{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color:#fff;
     padding: 0.4rem;
     border-radius: 0.6rem;
     height: 2.6rem;
     width: 25rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    box-shadow: rgba(111, 115, 119, 0.6) 0 8px 24px;
 }
 .header-searchbox input{
     font-size: 1.1rem;
@@ -44,11 +45,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 4.5rem;
     background-color: var(--main);
     color: var(--white);
     border-radius: 0.5rem;
     font-size: 0.9rem;
-    padding: 0.7rem;
+    padding: 0.2rem;
     cursor: pointer;
 }
 .btn-alert,.btn-switch{

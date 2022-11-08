@@ -10,7 +10,7 @@
 }
 
 :root{
---white :rgb(241, 239, 239);
+--white :#fff;
 --white-50:#ece9e9;
 --main : rgb(66, 47, 97);
 }
@@ -30,9 +30,9 @@ body{
     box-sizing: inherit;
 }
 input{
+    border: none;
     outline: none;
-    border: none;
 }
-button{
+/* button{
     border: none;
-}
+} */

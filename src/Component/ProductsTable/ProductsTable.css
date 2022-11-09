@@ -20,24 +20,24 @@
 }
 
 .products-table th {
-    padding: 20px;
+    padding: 1.2rem;
 }
 
 .products-table td {
-    padding: 20px;
+    padding: 1rem;
     display: flex;
     align-items: center;
 }
 
 .products-table-img {
-    width: 120px;
+    width: 6rem;
     border-radius: 10px;
     object-fit: cover;
 }
 
 .products-table-btn {
-    padding: 0.2rem 0.7rem;
-    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
     border-radius: 0.5rem;
     color: var(--white);
     background-color: var(--main);

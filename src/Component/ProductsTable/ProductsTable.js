@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import DeleteModal from "../DeleteModal/DeleteModal";
 import "./ProductsTable.css";
+import DetailsModal from "../DetailsModal/DetailsModal";
+import EditModal from "../EditModal/EditModal";
 
 export default function ProductsTable() {
-  const [isShowModal, setIsShowModal] = useState(false);
-
-  const deletBtnHamdeler = () => {
-    console.log('khar');
-    setIsShowModal(true);
-  };
+  const [isShowDeleteModal, setIsShowDeleteModal] = useState(false);
+  const [isShowDetailModal, setisShowDetailModal] = useState(false);
+  const [isShowEditModal, setisShowEditModal] = useState(false);
 
   const deleteModalCancelAction = () => {
-    console.log("مدال کنسل شد");
-    setIsShowModal(false);
+    setIsShowDeleteModal(false);
   };
-
   const deleteModalSubmitAction = () => {
-    console.log("مدال تایید شد");
-    setIsShowModal(false);
+    setIsShowDeleteModal(false);
   };
+  const closeModalDetails = () => {
+    setisShowDetailModal(false);
+  };
+  const editModals= ()=>{
+    console.log("gav");
+    setisShowEditModal(false)
 
+  }
   return (
     <>
       <table className="products-table">
@@ -41,20 +44,35 @@ export default function ProductsTable() {
           <td>56000 تومان</td>
           <td>82</td>
           <td>
-            <button className="products-table-btn">جزییات</button>
-            <button className="products-table-btn" onClick={deletBtnHamdeler}>
+            <button
+              className="products-table-btn"
+              onClick={() => setisShowDetailModal(true)}
+            >
+              جزییات
+            </button>
+            <button
+              className="products-table-btn"
+              onClick={() => setIsShowDeleteModal(true)}
+            >
               حذف
             </button>
-            <button className="products-table-btn">ویرایش</button>
+            <button
+              className="products-table-btn"
+              onClick={() => setisShowEditModal(true)}
+            >
+              ویرایش
+            </button>
           </td>
         </tr>
       </table>
-      {isShowModal && (
+      {isShowDeleteModal && (
         <DeleteModal
           submitAction={deleteModalSubmitAction}
           cancelAction={deleteModalCancelAction}
         />
       )}
+      {isShowDetailModal && <DetailsModal closeAction={closeModalDetails} />}
+      {isShowEditModal && <EditModal editAction={editModals}/>}
     </>
   );
 }

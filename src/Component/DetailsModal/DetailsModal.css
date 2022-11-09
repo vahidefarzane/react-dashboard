@@ -1,0 +1,35 @@
+.details-modal-container{
+    background-color: var(--white);
+    padding: 2rem 3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    column-gap: 1rem;
+}
+.details-modal{
+    display: flex;
+}
+.details-modal img{
+    width: 10rem;
+}
+.details-table{
+    margin-top: 1rem;
+}
+.details-table th{
+    text-align: right;
+    font-weight: bold;
+    font-family: 0.8rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+.details-table td{
+    text-align: left;
+}
+.details-close-btn{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    color: var(--white);
+    background-color: var(--main);
+    width: 7rem;
+    margin-top: 2rem;
+}

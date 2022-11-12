@@ -9,7 +9,6 @@ export default function Products() {
     <div>
       <AddNewProducts />
       <ProductsTable />
-      {/* <Errorbox massage="هیچ محصولی یافت نشد" /> */}
     </div>
   );
 }

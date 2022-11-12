@@ -10,6 +10,7 @@
 }
 .details-modal img{
     width: 10rem;
+    margin-left: 3rem;
 }
 .details-table{
     margin-top: 1rem;
@@ -31,5 +32,5 @@
     color: var(--white);
     background-color: var(--main);
     width: 7rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }

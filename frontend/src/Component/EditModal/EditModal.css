@@ -1,4 +1,5 @@
 .edit-modal-container {
+  width:30rem;
   background-color: var(--white);
   padding: 2rem;
   text-align: center;
@@ -16,19 +17,27 @@
   background-color: #f0ebeb;
   align-items: center;
   border-radius: 0.4rem;
-  padding: 0.3rem 0.9rem;
+  padding: 0.3rem 0.8rem;
   margin-top: 0.8rem;
 }
 .edit-products-form-group input {
   background-color: #f0ebeb;
-  width: 18rem;
+  width: 24rem;
+  font-size: 0.9rem;
 }
 .edit-products-btn {
   padding: 0.3rem 0.7rem;
   font-size: 0.9rem;
-  border-radius: 0.5rem;
   color: var(--white);
   background-color: var(--main);
-  width: 7rem;
+  width: 100%;
   margin-top: 2rem;
+  border: none;
+  cursor: pointer;
+}
+.lable-input{
+  text-align: right;
+  width: 16rem;
+  font-size: 0.9rem;
+
 }

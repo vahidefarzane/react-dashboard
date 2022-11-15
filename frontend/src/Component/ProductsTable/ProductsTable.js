@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import DeleteModal from "../DeleteModal/DeleteModal";
 import "./ProductsTable.css";
 import DetailsModal from "../DetailsModal/DetailsModal";
 import EditModal from "../EditModal/EditModal";
 import Errorbox from "../Errorbox/Errorbox";
 
-export default function ProductsTable() {
+export default function ProductsTable({allProducts,getAllProducts}) {
   const [isShowDeleteModal, setIsShowDeleteModal] = useState(false);
   const [isShowDetailModal, setisShowDetailModal] = useState(false);
   const [isShowEditModal, setisShowEditModal] = useState(false);
-  const [allProducts, setAllProducts] = useState([]);
   const [productID, setproductID] = useState(null);
   const [mainproduct, setMainproduct] = useState({});
   const [newProductTitle, setNewProductTitle] = useState("");
@@ -19,16 +18,6 @@ export default function ProductsTable() {
   const [newProductPopularity, setNewProductPopularity] = useState("");
   const [newProductSale, setNewProductSale] = useState("");
   const [newProductColors, setNewProductColors] = useState("");
-
-  useEffect(() => {
-    getAllProducts();
-  }, []);
-
-  const getAllProducts = () => {
-    fetch("http://localhost:8000/api/products/")
-      .then((res) => res.json())
-      .then((products) => setAllProducts(products));
-  };
 
   const deleteModalCancelAction = () => {
     setIsShowDeleteModal(false);
@@ -74,18 +63,19 @@ export default function ProductsTable() {
   return (
     <>
       {allProducts.length ? (
-        <table className="products-table">
+        <table className="table">
           <thead>
-            <tr className="products-table-heading-tr">
+            <tr className="table-heading-row">
               <th>عکس</th>
               <th>اسم</th>
               <th>قیمت</th>
+              <th>موجودی</th>
               <th>موجودی</th>
             </tr>
           </thead>
           <tbody>
             {allProducts.map((product) => (
-              <tr key={product.id} className="products-table-tr">
+              <tr key={product.id} className="table-body-row">
                 <td>
                   <img
                     src={product.img}
@@ -98,7 +88,7 @@ export default function ProductsTable() {
                 <td>{product.count}</td>
                 <td>
                   <button
-                    className="products-table-btn"
+                    className="table-btns"
                     onClick={() => {
                       setisShowDetailModal(true);
                       setMainproduct(product);
@@ -107,7 +97,7 @@ export default function ProductsTable() {
                     جزییات
                   </button>
                   <button
-                    className="products-table-btn"
+                    className="table-btns"
                     onClick={() => {
                       setIsShowDeleteModal(true);
                       setproductID(product.id);
@@ -116,7 +106,7 @@ export default function ProductsTable() {
                     حذف
                   </button>
                   <button
-                    className="products-table-btn"
+                    className="table-btns"
                     onClick={() => {
                       setisShowEditModal(true);
                       setproductID(product.id);

@@ -1,3 +1,6 @@
+.container {
+  margin-top: 5rem;
+}
 .modal-parent {
   position: fixed;
   top: 50%;
@@ -19,4 +22,43 @@
 .modal-parent.active {
   opacity: 1;
   visibility: visible;
+}
+table {
+  margin-top: 30px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 0.8rem;
+
+}
+.table-body-row ,.table-heading-row  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.table-heading-row {
+  background-color: var(--main);
+  color: var(--white);
+  border-radius: 0.8rem 0.8rem 0 0 ;
+  padding: 1.5rem 1.5rem 1.5rem 20rem;
+}
+.table-body-row{
+  border: 0.5px solid rgb(242, 240, 243);
+
+}
+.table-heading-row th{
+  text-align: right;
+}
+.table-body-row td{
+  text-align: right;
+  padding: 1.5rem;
+}
+.table-btns{
+  background-color: var(--main);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }

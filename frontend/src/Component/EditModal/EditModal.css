@@ -20,10 +20,11 @@
   padding: 0.3rem 0.8rem;
   margin-top: 0.8rem;
 }
-.edit-products-form-group input {
+.edit-products-form-group input,.edit-users-form-group input {
   background-color: #f0ebeb;
   width: 24rem;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 .edit-products-btn {
   padding: 0.3rem 0.7rem;
@@ -39,5 +40,12 @@
   text-align: right;
   width: 16rem;
   font-size: 0.9rem;
-
+}
+.edit-users-form-group{
+  display: flex;
+  background-color: #f0ebeb;
+  align-items: center;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  margin-top: 0.3rem;
 }

@@ -9,30 +9,32 @@
     color: var(--white);
     padding: 0.9rem;
     text-align: right;
-    border-bottom: 2px solid #7156aa;
+    border-bottom: 2px solid #9889b6;
 }
 .sidebar-links{
     margin-top: 1rem;
 }
-.sidebar-icon{
-    margin-left: 1rem;
-}
-.sidebar-links li{
+.sidebar-links a {
     position: relative;
-    padding: 1rem;
-}
-.sidebar-links li a{
+    padding: 15px;
     width: 100%;
     color: var(--white);
+    text-decoration: none;
     display: flex;
     justify-content: right;
     align-items: center;
-    font-size: 1rem;
-    text-decoration: none;
-    font-family: vazir-bold;
+    font-size: 1.1rem;
 }
-.sidebar-links li.active{
-    background-color: #30214e;
+.sidebar-links a:hover {
+    background-color: #ada5be;
+    color: var(--white);
+}
+.sidebar-icon{
+    margin-left: 1rem;
+}
+.sidebar-links a.active {
+    background-color: #ada5be;
+    transition-delay: 1s
 }
 .sidebar-links li:first-child{
     margin-bottom: 1.4rem;

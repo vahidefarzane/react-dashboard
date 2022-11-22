@@ -3,7 +3,6 @@ import Comments from "./Component/Comments/Comments";
 import Users from "./Component/Users/Users";
 import Orders from "./Component/Orders/Orders";
 import Offs from "./Component/Offs/Offs";
-import Admins from "./Component/Admins/Admins";
 import Home from "./Component/Home/Home";
 
 const routes = [
@@ -13,7 +12,6 @@ const routes = [
   { path: "/users", element: <Users /> },
   { path: "/orders", element: <Orders /> },
   { path: "/offs", element: <Offs /> },
-  { path: "/admins", element: <Admins /> },
 ];
 
 export default routes

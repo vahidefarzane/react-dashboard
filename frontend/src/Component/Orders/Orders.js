@@ -1,10 +1,9 @@
-import React,{useState,useEffect} from 'react'
-import Errorbox from '../Errorbox/Errorbox'
-
+import React, { useState, useEffect } from "react";
+import Errorbox from "../Errorbox/Errorbox";
 
 export default function Orders() {
-  const [allOrders,setAllOrders]=useState([])
-  
+  const [allOrders, setAllOrders] = useState([]);
+
   useEffect(() => {
     getAllOrders();
   }, []);
@@ -19,35 +18,33 @@ export default function Orders() {
       {allOrders.length ? (
         <table>
           <thead>
-            <tr>
-              <th>نام و نام خانوادگی</th>
-              <th>نام کاربری</th>
-              <th>رمز عبور</th>
-              <th>شماره تماس</th>
-              <th>ایمیل</th>
+            <tr className="table-heading-row">
+              <th>نام کاربر</th>
+              <th>نام محصول</th>
+              <th>تعداد سفارش</th>
+              <th>زمان سفارش</th>
+              <th>قیمت محصول</th>
+              <th>(درصد)میزان تخفیف</th>
+              <th>قیمت نهایی</th>
             </tr>
           </thead>
           <tbody>
-            {allOrders.map(order=>(
-              <tr>
-                <td>{order.firsname} - {order.lastname}</td>
-                <td>{order.ordername}</td>
-                <td>{order.password}</td>
-                <td>{order.phone}</td>
-                <td>{order.email}</td>
-                <td>
-                  <button>حذف</button>
-                  <button>جزییات</button>
-                  <button>ویرایش</button>
-                </td>
+            {allOrders.map((order) => (
+              <tr key={order.id} className="table-body-row">
+                <td>{order.userID}</td>
+                <td>{order.productID}</td>
+                <td>{order.count}</td>
+                <td>{order.date} - {order.hour}</td>
+                <td>{order.price}</td>
+                <td>{order.off}</td>
+                <td>{order.price-((order.price * order.off)/100)}</td>
+                
               </tr>
             ))}
           </tbody>
         </table>
-      )
-      :(
-        
-        <Errorbox massage="هیچ کاربری یافت نشد" />
+      ) : (
+        <Errorbox massage="هیچ سفارشی یافت نشد" />
       )}
     </div>
   );

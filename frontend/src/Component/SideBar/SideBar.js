@@ -42,10 +42,7 @@ export default function SideBar() {
           <AiOutlineDollarCircle class="sidebar-icon" />
           تخفیف ها
         </NavLink>
-        <NavLink to="/admins">
-          <AiOutlineDollarCircle class="sidebar-icon" />
-          ادمین ها
-        </NavLink>
+
       </ul>
     </div>
   );

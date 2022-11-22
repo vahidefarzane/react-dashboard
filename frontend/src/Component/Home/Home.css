@@ -1,0 +1,34 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  background-color: var(--white);
+  border-radius: 1.3rem;
+  padding: 1.6rem;
+}
+.chart-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chart-container h1 {
+  margin-bottom: 2.3rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: right;
+}
+.legend-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.legend-svg {
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #82ca9d;
+  margin-left: 0.5rem;
+}
+.legend-title {
+  color: #82ca9d;
+  font-size: 0.9rem;
+}

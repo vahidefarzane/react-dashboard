@@ -1,37 +1,41 @@
-@import './reset.css';
+@import "./reset.css";
 
 @font-face {
-    font-family: vazir;
-    src: url(./fonts/Vazir-FD-WOL.ttf);
+  font-family: vazir;
+  src: url(./fonts/Vazir-FD-WOL.ttf);
 }
 @font-face {
-    font-family: vazir-bold;
-    src: url(./fonts/Vazir-Bold-FD-WOL.ttf);
+  font-family: vazir-bold;
+  src: url(./fonts/Vazir-Bold-FD-WOL.ttf);
 }
 
-:root{
---white :#fff;
---white-50:#ece9e9;
---main : rgb(66, 47, 97);
+:root {
+  --white: #fff;
+  --white-50: #ece9e9;
+  --main: rgb(66, 47, 97);
 }
 
-body{
-    background-color: var(--white-50);
-    box-sizing: border-box;
-    display: flex;
-    direction: rtl;
+body {
+  background-color: var(--white-50);
+  box-sizing: border-box;
+  display: flex;
+  direction: rtl;
 }
 
-*,body,html{
-    font-family: vazir;
-    font-size: 100%;
+*,
+body,
+html {
+  font-family: vazir;
+  font-size: 100%;
 }
-*,*::before,*::after{
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-input{
-    border: none;
-    outline: none;
+input {
+  border: none;
+  outline: none;
 }
 /* button{
     border: none;
